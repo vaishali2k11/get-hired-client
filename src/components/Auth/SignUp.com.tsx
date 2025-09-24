@@ -4,11 +4,14 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signupStepOneSchema, SignupStepOneData, signupStepTwoSchema, SignupStepTwoData } from "@/lib/validations/auth/signupSchema";
-import { signupAction } from "@/app/(auth)/signup/action";
+// import { signupAction } from "@/app/(auth)/signup/action";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function SignUpComp() {
+    const router = useRouter();
     const [stepOneFormData, setStepOneFormData] = useState<SignupStepOneData>();
+    console.log('stepOneFormData:', stepOneFormData)
     const [doOpenNameForm, setDoOpenNameForm] = useState(false);
 
     const {
@@ -33,24 +36,26 @@ export default function SignUpComp() {
     };
 
     const stepTwoFormOnSubmit = async (data: SignupStepTwoData) => {
-        if (!stepOneFormData) return;
+        console.log('data:', data)
+        // if (!stepOneFormData) return;
+        router.push(`/dashboard/vaishali_rathore`)
 
-        // Extract rememberMe
-        const { rememberMe, ...stepOneWithoutRemember } = stepOneFormData;
+        // // Extract rememberMe
+        // const { rememberMe, ...stepOneWithoutRemember } = stepOneFormData;
 
-        const payload = {
-            ...stepOneWithoutRemember,
-            ...data,
-        };
+        // const payload = {
+        //     ...stepOneWithoutRemember,
+        //     ...data,
+        // };
 
-        await signupAction(payload);
+        // await signupAction(payload);
 
         // ✅ Handle rememberMe on frontend only
-        if (rememberMe) {
-            localStorage.setItem("rememberMe", "true");
-        } else {
-            localStorage.removeItem("rememberMe");
-        }
+        // if (rememberMe) {
+        //     localStorage.setItem("rememberMe", "true");
+        // } else {
+        //     localStorage.removeItem("rememberMe");
+        // }
     };
 
 
