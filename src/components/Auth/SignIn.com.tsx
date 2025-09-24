@@ -21,8 +21,8 @@ export default function SignInComp() {
     const onSubmit = async (data: SignInSchemaData) => {
         try {
             const result = await signinAction(data);
+            router.push(`/dashboard/vaishali_rathore`)
             if(result.success) {
-              router.push(`/dashboard/${result.userData.first_name}_${result.userData.last_name}`)
             }
         } catch (error) {
             console.log('error:', error)
