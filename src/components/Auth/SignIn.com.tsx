@@ -4,7 +4,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SignInSchemaData, signinSchema } from "@/lib/validations/auth/signinSchema";
-import { signinAction } from "@/app/(auth)/signin/action";
+// import { signinAction } from "@/app/(auth)/signin/action";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -20,10 +20,10 @@ export default function SignInComp() {
 
     const onSubmit = async (data: SignInSchemaData) => {
         try {
-            const result = await signinAction(data);
+            // const result = await signinAction(data);
             router.push(`/dashboard/vaishali_rathore`)
-            if(result.success) {
-            }
+            // if(result.success) {
+            // }
         } catch (error) {
             console.log('error:', error)
         }
