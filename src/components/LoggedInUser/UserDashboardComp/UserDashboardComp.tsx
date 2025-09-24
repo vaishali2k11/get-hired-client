@@ -27,8 +27,8 @@ export const UserDashboardComp = () => {
                     </div>
 
                     <div className="px-6 pt-16 pb-6">
-                        <h2 className="text-xl font-semibold">Rahul Rathor</h2>
-                        <p className="text-gray-500">Chandigarh, Chandigarh, India · <span className="text-blue-500 underline cursor-pointer">Contact info</span></p>
+                        <h2 className="text-xl font-semibold">Vaishali Rathore</h2>
+                        <p className="text-gray-500">Pune, India · <span className="text-blue-500 underline cursor-pointer">Contact info</span></p>
 
                         <div className="mt-4 flex flex-wrap gap-2">
                             <button className="bg-blue-600 text-white px-4 py-2 rounded font-medium hover:bg-blue-700">Open to</button>
