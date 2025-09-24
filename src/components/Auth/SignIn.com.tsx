@@ -20,6 +20,7 @@ export default function SignInComp() {
 
     const onSubmit = async (data: SignInSchemaData) => {
         try {
+            console.log('data:', data)
             // const result = await signinAction(data);
             router.push(`/dashboard/vaishali_rathore`)
             // if(result.success) {
