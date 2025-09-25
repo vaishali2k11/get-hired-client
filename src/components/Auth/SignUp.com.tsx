@@ -73,14 +73,14 @@ export default function SignUpComp() {
                     )}
                 </section>
             </nav>
-            <main className="flex flex-col w-full bg-[#f3f2f0] h-[calc(100vh-74px)]">
+            <main className="flex flex-col w-full bg-[#f3f2f0] min-h-[calc(100vh-74px)]">
                 {!doOpenNameForm && (
-                    <section className="mt-[60px] w-full">
-                        <p className=" flex justify-center items-center text-[40px] leading-[40px]">Make the most of your professional life</p>
-                        <div className="w-[400px] mx-auto mt-[20px] px-[20px] py-[30px] bg-white rounded-lg shadow-md">
-                            <form onSubmit={stepOneFormHandleSubmit(stepOneFormOnSubmit)} className="space-y-4">
+                    <section className="mt-[20px] mb-[20px] w-full">
+                        <p className="flex justify-center items-center text-[40px] leading-[40px]">Make the most of your professional life</p>
+                        <div className="w-[370px] mx-auto mt-[20px] px-[20px] py-[15px] bg-white rounded-lg shadow-md">
+                            <form onSubmit={stepOneFormHandleSubmit(stepOneFormOnSubmit)} className="space-y-2">
                                 <div>
-                                    <span>Sign In</span>
+                                    <span className="text-[22px] font-[500]">Sign Up</span>
                                 </div>
                                 <div>
                                     <label htmlFor="email">Email</label>
