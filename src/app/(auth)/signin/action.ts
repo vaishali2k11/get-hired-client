@@ -9,7 +9,7 @@ export async function signinAction(formData: SignInSchemaData) {
   }
 
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/signin`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_PROD_BACKEND_URL}/auth/signin`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(parsed.data),
