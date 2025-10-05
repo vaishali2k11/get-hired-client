@@ -17,7 +17,7 @@ export async function signupAction(formData: SignupCombineData) {
       cache: "no-store",
     });
 
-    console.log('res:', res)
+    console.log('res1:', res)
     if (!res.ok) {
       const errorData = await res.json();
       return { success: false, message: errorData.message };
